@@ -15,6 +15,19 @@ public class ParseUtil {
 	static String[] traits = { "sad", "surprise", "angry", "surprise", "happy", "disgust", "disgust", "disgust",
 			"happy", "sad", "sad", "sad", "disgust", "angry", "surprise", "surprise", "surprise" };
 
+	public boolean deleteDir(File dir) {
+		if (dir.isDirectory()) {
+			String[] children = dir.list();
+			for (int i = 0; i < children.length; i++) {
+				boolean success = deleteDir(new File(dir, children[i]));
+				if (!success) {
+					return false;
+				}
+			}
+		}
+		return dir.delete();
+	}
+
 	public void getActionUnits(double[] arr, File file) throws FileNotFoundException {
 		// File file = new File("D:\\karth\\Downloads\\OpenFace Output\\" + input);
 		Scanner scan = new Scanner(file);
