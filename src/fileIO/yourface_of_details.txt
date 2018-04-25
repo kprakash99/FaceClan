@@ -1,0 +1,13 @@
+Input:C:\Users\aaron\Documents\FaceClan\Face_Clan\src\fileIO\yourface.png
+Input full path:C:\Users\aaron\Documents\FaceClan\Face_Clan\src\fileIO\yourface.png
+Camera parameters:250,250,160,120
+Output HOG:yourface.hog
+Output image:yourface.jpg
+Output aligned directory:yourface_aligned
+Output csv:yourface.csv
+Gaze: 1
+AUs: 1
+Landmarks 2D: 1
+Landmarks 3D: 1
+Pose: 1
+Shape parameters: 1
